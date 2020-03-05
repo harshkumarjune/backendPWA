@@ -1,0 +1,59 @@
+{
+  "name": "orange-cross",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "1.0.0",
+  "description": "Orange Cross",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node",
+    "build": "babel ./server --out-dir dist",
+    "start:heroku": "babel-node index.js",
+    "heroku-postbuild": "npm install",
+    "migration:generate": "node_modules/.bin/sequelize migrations:generate --name",
+    "migrate": "node_modules/.bin/sequelize db:migrate",
+    "seed": "node_modules/.bin/sequelize db:seed:all",
+    "migrate:refresh": "npm run migrate:reset && npm run migrate",
+    "migrate:reset": "node_modules/.bin/sequelize db:migrate:undo:all"
+  },
+  "author": "Andela Simulations Programme",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.18.3",
+    "celebrate": "^11.0.0",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "express-session": "^1.15.6",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "methods": "^1.1.2",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "pg": "^7.9.0",
+    "request": "^2.87.0",
+    "sequelize": "^5.21.3",
+    "underscore": "^1.9.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "nodemon": "^1.18.10",
+    "sequelize-cli": "^5.5.0",
+    "uuid": "^3.3.2"
+  }
+}
