@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
     "celebrate": "^11.0.0",
     "cors": "^2.8.4",
